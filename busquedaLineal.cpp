@@ -5,7 +5,7 @@
 using namespace std;
 
 const int SIZE = 8192;  /* buffer size for reading /proc/<pid>/status */
-
+int array[50];
 
 
 
@@ -45,12 +45,9 @@ void print(int *array, int arraySize)
 
 int main()
 {
-    int arraySize;
+    int arraySize = 49;
     int searched;
-    cout << "Ingresa el tamanyo del array" << endl;
-    cin >> arraySize;
 
-    int array[arraySize];
 
     for (int i = 0; i < arraySize; i++) {
         array[i] = rand();
@@ -64,5 +61,5 @@ int main()
     cin >> searched;
     lineal_search(array, searched, arraySize);
     cout << &SIZE << endl;
-    cout << &array[50] << endl;
+    cout << &array[arraySize+1] << endl;
 }
