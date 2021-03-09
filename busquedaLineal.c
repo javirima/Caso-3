@@ -6,6 +6,8 @@
 #include <time.h>
 #include <stdio.h>
 
+const int SIZE = 8192;
+int arr[];
 int search(int arr[], int n, int x)
 {
     clock_t start_t, end_t, total_t;
@@ -42,5 +44,6 @@ int main(void)
     (result == -1)
         ? printf("Element is not present in array")
         : printf("Element is present at index %d", result);
+    printf("Sizes: %p  %p",&SIZE, &arr[10000]);
     return 0;
 }
